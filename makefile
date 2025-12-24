@@ -7,6 +7,32 @@ all:
 install:
 	pip install -r requirements.txt
 
+release:
+	# 1. Clean
+	rm -rf dist build *.spec
+	mkdir -p dist/obfuscated
+
+	# 2. Obfuscate
+	pyarmor gen -r --output dist/obfuscated main.py backend/ frontend/
+
+	# 3. Bundle
+	pyinstaller --noconfirm --windowed \
+		--name "Spark" \
+		--paths "dist/obfuscated" \
+		--collect-all sv_ttk \
+		--collect-all matplotlib \
+		--hidden-import=sqlite3 \
+		--hidden-import=_sqlite3 \
+		--hidden-import=tkinter.messagebox \
+		--hidden-import=tkinter.filedialog \
+		--hidden-import=tkinter.ttk \
+		--hidden-import=tkinter.font \
+		--add-data "dist/obfuscated/backend:backend" \
+		--add-data "dist/obfuscated/frontend:frontend" \
+		--add-data "dist/obfuscated/pyarmor_runtime_*:." \
+		dist/obfuscated/main.py
+
+
 dev:
 	$(P) -m unittest tests/*.py
 	$(P) hot_reload.py
