@@ -21,17 +21,17 @@
 > [!WARNING]  
 > Not ready for a production environment (yet). *Use at your own risk.*
 
-## Core Features 💪
+## Core Features
 I want this to run as fast as possible, with the goal of keeping the executable under a few hundred MB.
 
 Some other features include:
-- **Adding, managing, removing data** through forms. 📃
-- **No server!** 🙀 
-  - Relies on a single `.db` file locally. 🍻
-- **Exporting** to common file-types. 💾
-- **Viewing data, reports, table relationships** easily. 📊
+- **Adding, managing, removing data** through forms.
+- **No server!** 
+  - Relies on a single `.db` file locally.
+- **Exporting** to common file-types.
+- **Viewing data, reports, table relationships** easily.
 - **Simple, *Fast AF***, `SQLite` backend. 🏃‍➡️
-- [Hot reloading](hot_reload.py) with [watchdog](https://pypi.org/project/watchdog/) for insane productivity. ⏰
+- [Hot reloading](hot_reload.py) with [watchdog](https://pypi.org/project/watchdog/) for insane productivity. 
 
 ### Manage Your Contacts and Leads
 ![](https://github.com/Sieep-Coding/spark/blob/main/assets/image1.png)
@@ -39,7 +39,7 @@ Some other features include:
 ### Run Reports and View Insights
 ![](https://github.com/Sieep-Coding/spark/blob/main/assets/chart.png)
 
-## Navigation 🧭
+## Navigation
 - [Frontend](frontend/gui.py)
 - [Backend](backend/database.py)
 - [Tests](tests/)
@@ -48,6 +48,10 @@ Some other features include:
 - [License](LICENSE)
 
 ## Quickstart
+
+> [!TIP]  
+> Some Operating Systems (i.e. Arch based) may require you to download dependencies through
+> a virtual environment
 
 Clone:
 ```
@@ -61,7 +65,7 @@ git clone https://github.com/Sieep-Coding/spark.git
 | `make dev`                | Run Dev Environment                              |
 | `make backup`             | Backup database/flat data files.                 |
 
-## Dependencies ✍️
+## Dependencies
 
 > [!IMPORTANT]  
 > Only tested on Linux so far!
@@ -70,7 +74,7 @@ git clone https://github.com/Sieep-Coding/spark.git
 - [Sun Valley Theme](https://github.com/rdbende/Sun-Valley-ttk-theme/tree/main)
 - [Sqlite](https://www.sqlite.org/)
 
-> #### But why? 🤔
+> #### But why?
 > "In the same way a **woodworker** invests the time in a jig, a **programmer** can build a code generator. 
 > Once built, it can be used throughout the life of the project **at virtually no cost.**"
 > -- [*Andrew Hunt*](https://en.wikipedia.org/wiki/Andy_Hunt_(author))
